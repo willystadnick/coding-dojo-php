@@ -6,6 +6,11 @@
             "email": "willy.stadnick@gmail.com"
         }
     ],
+    "autoload": {
+        "psr-0": {
+            "": "src/"
+        }
+    },
     "require": {
 
     },
