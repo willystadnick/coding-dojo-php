@@ -20,11 +20,6 @@ class SampleTest extends PHPUnit_Framework_TestCase
         $this->assertEquals('sample123', $this->sample->sample());
     }
 
-    public function testTrue()
-    {
-        $this->assertTrue(true);
-    }
-
     // run after each test method
     protected function tearDown()
     {
