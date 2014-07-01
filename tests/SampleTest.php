@@ -23,6 +23,7 @@ class SampleTest extends PHPUnit_Framework_TestCase
     // run after each test method
     protected function tearDown()
     {
+        $this->sample = null;
     }
 
     // run after all test methods of this class have been executed
