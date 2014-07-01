@@ -4,11 +4,52 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "b6dba159f8e165106e95904527b02818",
+    "hash": "123de6b8c4294481fb0560a0503bf936",
     "packages": [
 
     ],
     "packages-dev": [
+        {
+            "name": "lstrojny/phpunit-clever-and-smart",
+            "version": "0.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lstrojny/phpunit-clever-and-smart.git",
+                "reference": "f1766f3fd77c0fbc9093261e5f8e664b65fa11d9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lstrojny/phpunit-clever-and-smart/zipball/f1766f3fd77c0fbc9093261e5f8e664b65fa11d9",
+                "reference": "f1766f3fd77c0fbc9093261e5f8e664b65fa11d9",
+                "shasum": ""
+            },
+            "require": {
+                "ext-sqlite3": "*",
+                "phpunit/phpunit": "*"
+            },
+            "require-dev": {
+                "athletic/athletic": "~0.1",
+                "symfony/process": "2.*"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "PHPUnit\\Runner\\CleverAndSmart": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lars Strojny",
+                    "email": "lars@strojny.net"
+                }
+            ],
+            "description": "A clever test runner for PHPUnit",
+            "time": "2014-03-13 17:41:39"
+        },
         {
             "name": "phpunit/php-code-coverage",
             "version": "2.0.9",

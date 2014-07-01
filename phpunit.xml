@@ -11,6 +11,18 @@
 		<ini name="memory_limit" value="-1"/>
 	</php>
 
+    <listeners>
+        <listener class="PHPUnit\Runner\CleverAndSmart\TestListener">
+            <arguments>
+                <object class="PHPUnit\Runner\CleverAndSmart\Storage\Sqlite3Storage">
+                    <arguments>
+                        <string>./phpunit-cas.db</string>
+                    </arguments>
+                </object>
+            </arguments>
+        </listener>
+    </listeners>
+
     <testsuites>
 		<testsuite name="default">
 			<directory>./tests</directory>
