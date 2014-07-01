@@ -1,3 +1,4 @@
+*.log
 *.db
 composer.phar
 vendor/
