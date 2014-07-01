@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <phpunit
-    colors="true"
+	colors="true"
 	verbose="true"
 	bootstrap="vendor/autoload.php"
 >
@@ -11,20 +11,20 @@
 		<ini name="memory_limit" value="-1"/>
 	</php>
 
-    <listeners>
-        <listener class="PHPUnit\Runner\CleverAndSmart\TestListener">
-            <arguments>
-                <object class="PHPUnit\Runner\CleverAndSmart\Storage\Sqlite3Storage">
-                    <arguments>
-                        <string>./phpunit-cas.db</string>
-                    </arguments>
-                </object>
-            </arguments>
-        </listener>
-        <listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener" />
-    </listeners>
+	<listeners>
+		<listener class="PHPUnit\Runner\CleverAndSmart\TestListener">
+			<arguments>
+				<object class="PHPUnit\Runner\CleverAndSmart\Storage\Sqlite3Storage">
+					<arguments>
+						<string>./phpunit-cas.db</string>
+					</arguments>
+				</object>
+			</arguments>
+		</listener>
+		<listener class="JohnKary\PHPUnit\Listener\SpeedTrapListener" />
+	</listeners>
 
-    <testsuites>
+	<testsuites>
 		<testsuite name="default">
 			<directory>./tests</directory>
 		</testsuite>
