@@ -1,0 +1,12 @@
+{
+    "name": "willy/coding-dojo-php",
+    "authors": [
+        {
+            "name": "willystadnick",
+            "email": "willy.stadnick@gmail.com"
+        }
+    ],
+    "require": {
+
+    }
+}
