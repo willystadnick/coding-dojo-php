@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<phpunit
+    colors="true"
+	verbose="true"
+	bootstrap="vendor/autoload.php"
+>
+
+	<php>
+		<ini name="intl.error_level" value="0"/>
+		<ini name="memory_limit" value="-1"/>
+	</php>
+
+    <testsuites>
+		<testsuite name="default">
+			<directory>./tests</directory>
+		</testsuite>
+	</testsuites>
+
+</phpunit>
