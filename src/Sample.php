@@ -4,6 +4,6 @@ class Sample
 {
     public function sample()
     {
-        return 'sample';
+        return 'sample123';
     }
 }
