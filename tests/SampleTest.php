@@ -17,7 +17,7 @@ class SampleTest extends PHPUnit_Framework_TestCase
 
     public function testSample()
     {
-        $this->assertEquals('sample123', $this->sample->sample());
+        $this->assertEquals('sample', $this->sample->sample());
     }
 
     // run after each test method
