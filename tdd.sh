@@ -1,5 +1,6 @@
 #!/bin/sh
 while true; do
+	touch pilots.log
 	inotifywait -r ./ -e create,modify,delete &&
 	clear &&
 	phpunit --configuration phpunit.xml &&
@@ -7,13 +8,13 @@ while true; do
         if [ "$(git status --porcelain)" ]; then
             git add -u . &&
             git commit -m "`
-                zenity --entry --title="Parabéns piloto" --text="Qual o título deste commit?" --width="400" --height="300" &&
+                zenity --entry --title="Congratulations pilot" --text="What is the title of this commit?" --width="400" --height="300" &&
                 (
                     echo &&
                     echo -n @ &&
-                    tail -1 pilotos.log
+                    tail -1 pilots.log
                 ) ||
-                sleep 10s
+                sleep 15s
             `"
         fi
     )
