@@ -6,7 +6,7 @@ while true; do
 	phpunit --configuration phpunit.xml &&
     (
         if [ "$(git status --porcelain)" ]; then
-            git add -u . &&
+            git add -A . &&
             git commit -m "`
                 zenity --entry --title="Congratulations pilot" --text="What is the title of this commit?" --width="400" --height="300" &&
                 (
