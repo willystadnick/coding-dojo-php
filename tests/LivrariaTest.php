@@ -4,7 +4,8 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
 {
     protected $livro;
     protected $pedido;
-    const  PRECO = 41;
+    const NOME = "A Pedra Filosofal";
+    const PRECO = 41;
 
     // run before any test method of this class will be executed
     public static function setUpBeforeClass()
@@ -14,12 +15,13 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
     // run before each test method
     protected function setUp()
     {
-        $this->livro = new Livro(self::PRECO);
+        $this->livro = new Livro(self::NOME, self::PRECO);
         $this->pedido = new Pedido();
     }
 
     public function testLivro()
     {
+        $this->assertEquals(self::NOME, $this->livro->nome());
         $this->assertEquals(self::PRECO, $this->livro->preco());
     }
 
@@ -34,6 +36,12 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
 
     public function testValorTotalPedido(){
         $this->assertEquals(0, $this->pedido->checarValor());
+    }
+
+    public function testDesconto() {
+        $this->pedido->addLivro($this->livro);
+        $this->pedido->addLivro($this->livro);
+        $this->assertEquals(0.95*2*self::PRECO, $this->pedido->checarValor());
     }
 
 

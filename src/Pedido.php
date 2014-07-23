@@ -11,7 +11,7 @@ class Pedido
 		{
 			$total += $livro->preco();
 		}
-		return $total;
+		return $total*0.95;
 	}
 
 	public function getQuantidade()
@@ -23,5 +23,6 @@ class Pedido
 	{
 		$this->livros[] = $livro;
 	}
+
     
 }
