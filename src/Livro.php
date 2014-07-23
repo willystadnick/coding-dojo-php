@@ -2,8 +2,12 @@
 
 class Livro
 {
+	private $preco;
+	public function __construct($valor){
+		$this->preco = $valor;
+	}
     public function preco()
     {
-        return 42;
+        return $this->preco ;
     }
 }
