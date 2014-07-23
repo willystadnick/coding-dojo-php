@@ -2,10 +2,15 @@
 
 class Pedido
 {
-	private $livros;
+	protected $livros = array();
 	public function getQuantidade()
     {
-        return 1;
+        return count($this->livros);
     }
+
+	public function addLivro(Livro $livro)
+	{
+		$this->livros[] = $livro;
+	}
     
 }
