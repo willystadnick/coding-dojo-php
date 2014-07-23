@@ -10,5 +10,5 @@ class Livro
     {
         return $this->preco ;
     }
-    
+
 }
