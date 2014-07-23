@@ -3,6 +3,7 @@
 class LivrariaTest extends PHPUnit_Framework_TestCase
 {
     protected $livro;
+    protected $pedido;
     const  PRECO = 41;
 
     // run before any test method of this class will be executed
@@ -14,6 +15,7 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
     protected function setUp()
     {
         $this->livro = new Livro(self::PRECO);
+        $this->pedido = new Pedido();
     }
 
 
@@ -22,7 +24,9 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
     {
         $this->assertEquals(self::PRECO, $this->livro->preco());
     }
-
+    public function testPedido(){
+        $this->assertEquals(1,$this->pedido->getQuantidade());
+    } 
     // run after each test method
     protected function tearDown()
     {
