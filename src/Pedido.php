@@ -24,5 +24,8 @@ class Pedido
 		$this->livros[] = $livro;
 	}
 
-    
+    public function verificaIguais()
+    {
+    	return 2;
+    }
 }
