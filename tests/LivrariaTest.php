@@ -52,6 +52,13 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
         $this->assertEquals($expects, $this->pedido->verificaIguais());
     }
 
+    public function testTotalDesconto()
+    {
+        $this->pedido->addLivro($this->livro);
+        $this->pedido->addLivro($this->livro);
+        $this->assertEquals(0, $this->pedido->checarValorDesconto());
+    }
+
 
 
     // run after each test method

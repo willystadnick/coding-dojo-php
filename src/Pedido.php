@@ -38,4 +38,8 @@ class Pedido
 
     	return $iguais;
     }
+
+    public function checarValorDesconto() {
+    	return 0;
+    }
 }
