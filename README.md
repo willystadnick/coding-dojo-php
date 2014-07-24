@@ -1,2 +1,9 @@
-coding-dojo-php
-===============
+# coding-dojo-php
+
+## Setup:
+1. Install/update vendors
+2. Run pp.sh in background
+3. Run tdd.sh in foreground
+
+## Problem:
+* http://dojopuzzles.com/
