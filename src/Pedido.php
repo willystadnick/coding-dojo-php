@@ -21,23 +21,27 @@ class Pedido
 
 	public function addLivro(Livro $livro)
 	{
-		$this->livros[] = $livro;
+		if( !isset($this->livros[$livro->nome()]))
+		{
+			$this->livros[$livro->nome()]= array( $livro, 'quant' => 0 );
+		}
+		$this->livros[$livro->nome()]['quant']++;
 	}
 
-    public function verificaIguais()
-    {
-    	$iguais = [];
-    	foreach ($this->livros as $livro) {
-    		$nome = $livro->nome();
-    		if (! isset($iguais[$nome])) {
-    			$iguais[$nome] = 0;
-    		}
+    // public function verificaIguais()
+    // {
+    // 	$iguais = [];
+    // 	foreach ($this->livros as $livro) {
+    // 		$nome = $livro->nome();
+    // 		if (! isset($iguais[$nome])) {
+    // 			$iguais[$nome] = 0;
+    // 		}
 
-    		++$iguais[$nome];
-    	}
+    // 		++$iguais[$nome];
+    // 	}
 
-    	return $iguais;
-    }
+    // 	return $iguais;
+    // }
 
     public function checarValorDesconto() {
     	
