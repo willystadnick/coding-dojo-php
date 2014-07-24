@@ -26,6 +26,16 @@ class Pedido
 
     public function verificaIguais()
     {
-    	return 2;
+    	$iguais = [];
+    	foreach ($this->livros as $livro) {
+    		$nome = $livro->nome();
+    		if (! isset($iguais[$nome])) {
+    			$iguais[$nome] = 0;
+    		}
+
+    		++$iguais[$nome];
+    	}
+
+    	return $iguais;
     }
 }
