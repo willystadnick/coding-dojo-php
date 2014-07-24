@@ -41,7 +41,7 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
     public function testDesconto() {
         $this->pedido->addLivro($this->livro);
         $this->pedido->addLivro($this->livro);
-        $this->assertEquals(0.95*2*self::PRECO, $this->pedido->checarValor());
+        $this->assertEquals(2*self::PRECO, $this->pedido->checarValor());
     }
 
     public function testLivrosIguais()
@@ -56,7 +56,8 @@ class LivrariaTest extends PHPUnit_Framework_TestCase
     {
         $this->pedido->addLivro($this->livro);
         $this->pedido->addLivro($this->livro);
-        $this->assertEquals(0, $this->pedido->checarValorDesconto());
+        $totalDesconto = 0.95*$this->pedido->checarValor();
+        $this->assertEquals($totalDesconto, $this->pedido->checarValorDesconto());
     }
 
 

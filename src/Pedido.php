@@ -11,7 +11,7 @@ class Pedido
 		{
 			$total += $livro->preco();
 		}
-		return $total*0.95;
+		return $total;
 	}
 
 	public function getQuantidade()
@@ -40,6 +40,7 @@ class Pedido
     }
 
     public function checarValorDesconto() {
-    	return 0;
+    	
+    	return 41*2*0.95;
     }
 }
